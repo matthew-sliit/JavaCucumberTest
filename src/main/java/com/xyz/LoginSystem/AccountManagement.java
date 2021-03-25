@@ -12,6 +12,7 @@ public class AccountManagement {
 			this.type = type; this.pass = password;
 		}
 	}
+	//store account data
 	private static Map<String, Account> accountData;
 	private static int instance=0;
 
