@@ -1,7 +1,6 @@
 arch: amd64
 language: java
-jdk: 
- - oraclejdk11
+jdk: oraclejdk11
 before_install:
  - gem install hiptest-publisher
  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=524844
