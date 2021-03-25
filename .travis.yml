@@ -1,6 +1,6 @@
 arch: amd64
 language: java
-sudo: false
+sudo: true
 jdk: 
  - openjdk11
 before_install:
