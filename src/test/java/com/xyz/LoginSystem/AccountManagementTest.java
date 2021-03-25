@@ -2,8 +2,6 @@ package com.xyz.LoginSystem;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import io.cucumber.junit.CucumberOptions;
-
 //@RunWith(Cucumber.class) //not required for junit 5
 /*@CucumberOptions(
  features = "Feature"
