@@ -14,7 +14,7 @@ before_install:
 
 script:
  - java --version
- - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -o -e -Ptrasis
+ - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e -Ptrasis
 
 after_script:
  - hiptest-publisher -c hiptest-publisher.conf --push="nosetests.xml" --test-run-id=524844
