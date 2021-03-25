@@ -2,15 +2,15 @@ arch: amd64
 language: java
 sudo: false
 jdk: 
-    - openjdk11
+ - openjdk11
 before_install:
-    - gem install hiptest-publisher
-    - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=524844
+ - gem install hiptest-publisher
+ - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=524844
 script:
-    - java --version
-    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-    - mvn test -B
+ - java --version
+ - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+ - mvn test -B
 after_script:
-    - hiptest-publisher -c hiptest-publisher.conf --push="nosetests.xml" --test-run-id=524844
+ - hiptest-publisher -c hiptest-publisher.conf --push="nosetests.xml" --test-run-id=524844
 after_success:
 after_failure:
