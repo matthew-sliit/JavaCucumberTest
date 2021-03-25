@@ -1,8 +1,7 @@
 arch: amd64
 language: java
-sudo: true
 jdk: 
- - openjdk11
+ - oraclejdk11
 before_install:
  - gem install hiptest-publisher
  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=524844
@@ -12,5 +11,4 @@ script:
  - mvn test -B
 after_script:
  - hiptest-publisher -c hiptest-publisher.conf --push="nosetests.xml" --test-run-id=524844
-after_success:
-after_failure:
+
