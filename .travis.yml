@@ -9,12 +9,14 @@ language: java
 jdk: oraclejdk11
 
 before_install:
+ - rvm install 2.2
+ - rvm use 2.2
  - gem install hiptest-publisher
  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=524844
 
 script:
  - java --version
- - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e -Ptrasis
+ - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e
 
 after_script:
  - hiptest-publisher -c hiptest-publisher.conf --push="nosetests.xml" --test-run-id=524844
