@@ -2,4 +2,6 @@
 ---
 Simple example on how to display test results on [cucumber studio](https://cucumber.io/) using [hiptest](https://github.com/hiptest/hps-java-junit) with github + [travis continuous integration](https://www.travis-ci.com/)  
 language: Java  
-Test methodL Junit
+Test method: [Junit](https://junit.org/junit4/)  
+Development Enviroment: [Eclipse](https://www.eclipse.org/) + Maven
+
