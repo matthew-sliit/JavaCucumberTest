@@ -48,6 +48,7 @@ public class ProjectTest extends TestCase {
     //
     // Tags: Requirement:high
     public void testLogoutAfterLoggingInUida3bee92582954722bb12b52f71829c90() {
+    	fail("Custom fail");//fail?
         // Given the user has logged in
         actionwords.theUserHasLoggedIn();
         // When the user then clicks logout option
