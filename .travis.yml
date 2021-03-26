@@ -13,13 +13,11 @@ before_install:
  - rvm install ruby-3.0.0
  - rvm use ruby-3.0.0
  - gem install hiptest-publisher
- - hiptest-publisher -c hiptest-publisher.conf --test-run-id=524844 --without=actionwords
+ - hiptest-publisher --config=hiptest-publisher.conf --test-run-id=524844 --without=actionwords
 
 script:
  - java --version
- - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e
- - mvn -Dtest="com.xyz.LoginSystem.*Test" test
- - mvn site
+ - mvn package
  - cd target/surefire-reports/
  - ls
  - cd -
