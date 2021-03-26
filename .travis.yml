@@ -21,7 +21,7 @@ script:
  - mvn '-Dtest=com.xyz.LoginSystem.*Test' test
 
 after_script:
- - hiptest-publisher -c hiptest-publisher.conf --push="${basedir}/target/surefire-reports/TEST-com.xyz.LoginSystem.*.xml" --test-run-id=524844
+ - hiptest-publisher -c hiptest-publisher.conf --push="${basedir}/target/surefire-reports/TEST-*.xml" --test-run-id=524844
 
 env:
   global:
