@@ -17,6 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <java.version>11.0.6</java.version>
   </properties>
 
   <dependencies>
@@ -30,7 +31,6 @@
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>6.8.1</version>
-      <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
     <dependency>
@@ -51,14 +51,18 @@
       <artifactId>junit-jupiter-api</artifactId>
       <version>5.8.0-M1</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine 
-    <dependency>
-      <groupId>org.junit.vintage</groupId>
-      <artifactId>junit-vintage-engine</artifactId>
-      <version>5.8.0-M1</version>
-      <scope>test</scope>
-    </dependency>-->
-    
+   <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+   <dependency>
+     <groupId>org.apache.maven.plugins</groupId>
+     <artifactId>maven-site-plugin</artifactId>
+     <version>3.9.1</version>
+   </dependency>
+   <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-report-plugin -->
+   <dependency>
+     <groupId>org.apache.maven.plugins</groupId>
+     <artifactId>maven-surefire-report-plugin</artifactId>
+     <version>3.0.0-M5</version>
+   </dependency> 
   </dependencies>
 
   <build>
@@ -92,10 +96,23 @@
           <configuration>
              <testFailureIgnore>true</testFailureIgnore>
              <includes>
-               <include>com.xyz.LoginSystem.AccountManagementTest.java</include>
+               <include>com.xyz.LoginSystem.*Test.java</include>
              </includes>
           </configuration>
         </plugin>
+          
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>3.0.0-M5</version>
+          <executions>
+            <execution>
+              <phase>test</phase>
+              <goals><goal>report-only</goal></goals>
+            </execution>
+          </executions>
+        </plugin>
+        
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
