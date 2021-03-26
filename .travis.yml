@@ -20,9 +20,13 @@ script:
  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e
  - mvn -Dtest="com.xyz.LoginSystem.*Test" test
  - mvn site
+ - cd target/surefire-reports/
+ - ls
 
 after_script:
- - hiptest-publisher -c hiptest-publisher.conf --test-run-id=524844 -p target/surefire-reports/TEST-com.*.xml --push-format junit
+ - hiptest-publisher -c hiptest-publisher.conf --test-run-id=524844 -p "target/surefire-reports/TEST-com.xyz.LoginSystem.LoggingInTest.xml" --push-format junit
+ - hiptest-publisher -c hiptest-publisher.conf --test-run-id=524844 -p "target/surefire-reports/TEST-com.xyz.LoginSystem.LoggingOutTest.xml" --push-format junit
+ - hiptest-publisher -c hiptest-publisher.conf --test-run-id=524844 -p "target/surefire-reports/TEST-com.xyz.LoginSystem.SignUpTest.xml" --push-format junit
 
 env:
   global:
