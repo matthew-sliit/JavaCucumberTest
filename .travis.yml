@@ -23,9 +23,7 @@ script:
  - cd -
 
 after_script:
- - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.LoginSystem.LoggingInTest.xml" --test-run-id 524844 --push-format junit
- - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.LoginSystem.LoggingOutTest.xml" --test-run-id 524844 --push-format junit
- - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.LoginSystem.SignUpTest.xml" --test-run-id 524844 --push-format junit
+ - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.LoginSystem.*.xml" --test-run-id 524844 --push-format junit
 
 env:
   global:
