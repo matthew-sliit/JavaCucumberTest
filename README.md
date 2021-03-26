@@ -12,3 +12,4 @@ Simple example on how to display test results on [cucumber studio](https://cucum
 [https://cucumber.io/docs/installation/java/](https://cucumber.io/docs/installation/java/)  
 [https://github.com/hiptest/hps-java-junit](https://github.com/hiptest/hps-java-junit)  
 [https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html](https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html)  
+[https://docs.travis-ci.com/user/languages/java/](https://docs.travis-ci.com/user/languages/java/)  
