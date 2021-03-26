@@ -13,7 +13,7 @@ before_install:
  - rvm install ruby-3.0.0
  - rvm use ruby-3.0.0
  - gem install hiptest-publisher
- - hiptest-publisher --config=hiptest-publisher.conf --token=$SECRET_TOKEN --test-run-id=524844 --without=actionwords
+ - hiptest-publisher --config=hiptest-publisher.conf --token=75184529344175549915116395611745660612734343029406126349 --test-run-id=524844 --without=actionwords
 
 script:
  - java --version
@@ -23,7 +23,7 @@ script:
  - cd -
 
 after_script:
- - hiptest-publisher -c hiptest-publisher.conf --token=$SECRET_TOKEN --test-run-id=524844 -p "target/surefire-reports/TEST-com.xyz.LoginSystem.*.xml" --push-format junit
+ - hiptest-publisher -c hiptest-publisher.conf --token=75184529344175549915116395611745660612734343029406126349 --test-run-id=524844 -p "target/surefire-reports/TEST-com.xyz.LoginSystem.*.xml" --push-format junit
 
 env:
   global:
