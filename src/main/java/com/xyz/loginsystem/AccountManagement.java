@@ -1,9 +1,7 @@
-package com.xyz.LoginSystem;
+package com.xyz.loginsystem;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class AccountManagement {
 	private class Account{

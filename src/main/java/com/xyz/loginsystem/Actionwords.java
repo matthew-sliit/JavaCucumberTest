@@ -1,4 +1,4 @@
-package com.xyz.LoginSystem;
+package com.xyz.loginsystem;
 
 public class Actionwords {
 
