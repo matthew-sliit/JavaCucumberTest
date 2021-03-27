@@ -13,6 +13,7 @@ before_install:
  - rvm install ruby-3.0.0
  - rvm use ruby-3.0.0
  - gem install hiptest-publisher
+#generate test classes from cucumberstudio testrun id
 #- hiptest-publisher --config-file hiptest-publisher.conf --test-run-id 524844 --without=actionwords
 
 script:
@@ -23,8 +24,9 @@ script:
  - cd -
 
 after_script:
- - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.LoginSystem.*.xml" --test-run-id 524844 --push-format junit
+ - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.loginsystem.*.xml" --test-run-id 524844 --push-format junit
 
+#private repo
 env:
   global:
     - secure: "ZnHbR/sUlF4Gk8GQ54mFVwqjdlmoCsGTycQQ+ZX97X4k2Pm6SiW0AjC37kxLlJHY1tNtpujQanQEixi302KGchqYp2trHgSGn72KmCr+MG1m+MX7s8gjORKVW4BtoiU9U3TdSTMonCXxm9CT92+fExVO9MjDb//Tb58EAjuA/MlcFb0f7BFLUpk/sOb/LI4SVVd8S05iC3kWK/HY20BnOj5gJeU+TdggZjjHtrbYgiOhFN30Z5yFXzONZscKB/Xn25QNnPvlGHlVc7Ssuxzjiu4NyWEJq48YfzL39S8ZYrZPs1f0Qds+Gy+5hUO4OE9lQka10l998NFc9u6dxBCXi7Ox0G5c+4wKnXQtdXUsbkZDreT7UfRCNgygwT/NlSzEXrBVSxCOBatFDtC07lEMVyNSaJ1z8DwUYhMtriZ1BTXnpFKAvhlK0keXhqabPJKk3Yhb0IoOAggWvFMwUX0Al0LntsFE59ne9TCAP0bsGB3eood6Im/IjUpvspAr49gzSf4eGM/5mzYaaYAI/iQBwbxPNZfri9NFHn29Q6ZILaDcomUDCyJFyStV9K4rW2200t1mudnUlFjLtVvGWEiDdmhQNxND6jEpiekMIMZfOs0BSh5XJZI0BFfFFEbGDMlNu0nN7Tm19sAdrtKqb3TeJSIs5vclRlC+nG4qnGyBrT8="
