@@ -14,7 +14,7 @@ before_install:
  - rvm use ruby-3.0.0
  - gem install hiptest-publisher
 #generate test classes from cucumberstudio testrun id
-#- hiptest-publisher --config-file hiptest-publisher.conf --test-run-id 524844 --without=actionwords
+#- hiptest-publisher --config-file java-junit.conf --test-run-id 524844 --without=actionwords
 
 script:
  - java --version
@@ -24,7 +24,7 @@ script:
  - cd -
 
 after_script:
- - hiptest-publisher --config-file hiptest-publisher.conf --push "target/surefire-reports/TEST-com.xyz.loginsystem.*.xml" --test-run-id 524844 --push-format junit
+ - hiptest-publisher --config-file java-junit.conf --push "target/surefire-reports/TEST-com.xyz.loginsystem.*.xml" --test-run-id 524844 --push-format junit
 
 #private repo
 env:
