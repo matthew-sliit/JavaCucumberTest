@@ -47,6 +47,7 @@ public class LoggingInTest extends TestCase {
 
 
     public void loginWithInvalidCredentials(String username, String password) {
+    	fail("Custom Exception abc");
         // Given the system shows the login option
         actionwords.theSystemShowsTheLoginOption();
         // When the user enters username and password
