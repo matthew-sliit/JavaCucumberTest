@@ -19,9 +19,9 @@ before_install:
 script:
  - java --version
  - mvn package
- - cd target/surefire-reports/
- - ls
- - cd -
+# - cd target/surefire-reports/
+# - ls
+# - cd -
 
 after_script:
  - hiptest-publisher --config-file java-junit.conf --push "target/surefire-reports/TEST-com.xyz.loginsystem.*.xml" --test-run-id 524844 --push-format junit
