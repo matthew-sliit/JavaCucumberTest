@@ -29,6 +29,7 @@ public class LoggingInTest extends TestCase {
     public void accountDisabled(String username, String password) {
         // Tags: Requirement:low
         // Given the account is disabled
+    	fail("Custom Exception abc");
         actionwords.theAccountIsDisabled();
         // And the system shows the login option
         actionwords.theSystemShowsTheLoginOption();
