@@ -1,10 +1,9 @@
 package com.xyz.loginsystem;
 
+import junit.framework.TestCase;
 import com.xyz.loginsystem.Actionwords;
 
-import junit.framework.TestCase;
-
-public class ProjectTest extends TestCase {
+public class LoggingInTest extends TestCase {
 
     public Actionwords actionwords = new Actionwords();
     public void loginWithValidCredentials(String username, String password) {
@@ -44,40 +43,6 @@ public class ProjectTest extends TestCase {
 
     public void testAccountDisabledLoginUser1Uid55467d15c44244afa00142395def1abd() {
         accountDisabled("USER100", "s902_p_o12");
-    }
-
-
-    //
-    // Tags: Requirement:high
-    public void testLogoutAfterLoggingInUida3bee92582954722bb12b52f71829c90() {
-        // Given the user has logged in
-        actionwords.theUserHasLoggedIn();
-        // When the user then clicks logout option
-        actionwords.theUserThenClicksLogoutOption();
-        // Then the system logs user out
-        actionwords.theSystemLogsUserOut();
-        // And the system shows the login option
-        actionwords.theSystemShowsTheLoginOption();
-    }
-    public void signUpNewAccount(String username, String password, String type) {
-        // Given the system shows the sign up option
-        actionwords.theSystemShowsTheSignUpOption();
-        // When the user enters username and password
-        actionwords.theUserEntersUsernameAndPassword();
-        // Then the system should verify username and password
-        actionwords.theSystemShouldVerifyUsernameAndPassword();
-        // But the account exists
-        actionwords.theAccountExists();
-        // Then the system responds with unsuccessful message
-        actionwords.theSystemRespondsWithUnsuccessfulMessage();
-    }
-
-    public void testSignUpNewAccountSignUpUser1Uid237899855cb34a75b672153bc009bc1c() {
-        signUpNewAccount("USER101", "abc9ops_2", "STUDENT");
-    }
-
-    public void testSignUpNewAccountSignUpUser2Uid7066b708a55644019b8a27fde3ce48a7() {
-        signUpNewAccount("USER102", "let012_ks", "TEACHER");
     }
 
 
